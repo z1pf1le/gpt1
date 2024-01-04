@@ -1,7 +1,10 @@
 package com.example;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 
+@Component //?
 @Entity
 @Table(name = "users")
 public class User {
@@ -23,7 +26,7 @@ public class User {
 
     }
 
-    public User(String name, String lastName, Byte age) {
+    public User(Byte age,String name, String lastName) {
         this.name = name;
         this.lastName = lastName;
         this.age = age;
